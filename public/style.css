@@ -1,0 +1,635 @@
+body {
+    margin: 0;
+    padding: 0.11px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+#menu2 {
+    display: none;
+}
+
+.mainimg {}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex!important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scroolh {
+    background-color: #bc8d45;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.navigation li {
+    padding: 10px;
+    transition: all 700ms ease-in-out;
+}
+
+.navigation li a {
+    font-size: 130%;
+    padding: 15px;
+    font-family: 'Chewy', cursive;
+    color: #ffffff;
+}
+
+.navigation li a:hover {
+    text-decoration: none;
+}
+
+.active {
+    background-color: saddlebrown;
+}
+
+.navigation li:hover {
+    background-color: saddlebrown;
+}
+
+.socialicons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.socialicons li {
+    padding: 10px;
+}
+
+.socialicons li a {
+    padding: 4px;
+    font-size: 140%;
+    color: #ffffff;
+}
+
+.socialicons li a i {
+    transition: all 400ms ease-in-out;
+}
+
+.socialicons li a i:hover {
+    transform: scale(1.3);
+}
+
+
+/* end of header */
+
+.mainimg {
+    background: url('img/mo.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 735px;
+    margin: 0 0 0 0;
+    padding: 70px 0 0 0;
+}
+
+.banner {
+    width: 65%;
+    margin: 10% auto;
+}
+
+.name {
+    position: absolute;
+    color: white;
+    left: 1%;
+    top: 30%;
+    transform: rotate(335deg);
+    -webkit-transform: rotate(335deg);
+    -moz-transform: rotate(335deg);
+    -o-transform: rotate(335deg);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 260%;
+}
+
+.text {
+    font-family: 'Permanent Marker', cursive;
+    color: #ffffff;
+    width: 38%;
+    float: left;
+    font-size: 130px;
+    position: relative;
+    letter-spacing: -1px;
+    line-height: 100%;
+    text-align: right;
+}
+
+.smalltext {
+    font-size: 20%;
+    line-height: 100%;
+    font-family: 'Chewy', cursive;
+}
+
+.mummy {
+    background-image: url('img/mummy4.png');
+    width: 30%;
+    float: right;
+    width: 402px;
+    height: 479px;
+    overflow: hidden;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+#blood {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 37%;
+    left: 20%;
+    animation: bloods 4s ease-in-out infinite forwards;
+    opacity: 0;
+}
+
+#blood2 {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 37%;
+    left: 45%;
+    animation: bloods 4s ease-in-out infinite forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+#blood3 {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 34%;
+    left: 49%;
+    animation: bloods 4s ease-in-out infinite forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes bloods {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        transform: translate3d(0, 180px, 0);
+        opacity: 0.2;
+    }
+    26% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+
+.appers {
+    animation: apper 700ms ease-in-out forwards;
+}
+
+@keyframes apper {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blood {
+    0% {}
+}
+
+
+/* end of main img */
+
+.about {
+    padding: 0.11px;
+    width: 100%;
+    background-color: #dedecd;
+}
+
+.ab {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.meimg {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.meimg:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.ab h2 {
+    margin-top: 60px;
+    color: rgb(102, 102, 102);
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.me {
+    margin: 20px auto;
+    float: left;
+    border-radius: 70%;
+    width: 300px;
+    height: 300px;
+    background: url("img/me.png") center;
+}
+
+.bout {
+    margin-top: 40px;
+    font-size: 160%;
+    float: right;
+    font-family: 'Chewy', cursive;
+    color: rgb(102, 102, 102);
+    width: 50%;
+}
+
+#guard {
+    float: left;
+    height: 400px;
+    margin: 80px 0 0 50px;
+}
+
+#guard2 {
+    float: right;
+    height: 400px;
+    margin: 80px 50px 0 0;
+}
+
+.shakeme {
+    animation: shake 800ms ease-in-out;
+}
+
+@keyframes shake {
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.shake {
+    animation-name: shake;
+}
+
+
+/* end of about */
+
+.whatido {
+    background-color: #bc8d45;
+    height: auto;
+    padding: 0.11px;
+}
+
+.do {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.do:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.circle {
+    width: 25%;
+    float: left;
+}
+
+.circle h3 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.circle p {
+    width: 88%;
+    margin: 20px auto;
+    font-family: 'Overlock', cursive;
+    font-size: 160%;
+}
+
+.circimg {
+    margin: 20px auto;
+    border-radius: 70%;
+    height: 130px;
+    width: 130px;
+    border: black 4px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circimg i {
+    font-size: 440%;
+}
+
+
+/* end of skills */
+
+.work {
+    padding: 0.11px;
+    width: 100%;
+    background-color: #bc8d45;
+}
+
+.work h2 {
+    margin: 50px 0 20px 0;
+    text-align: center;
+    font-family: 'Chewy', cursive;
+}
+
+.down {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.down i {
+    font-size: 250%;
+    margin-bottom: 20px;
+}
+
+.work:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+.workwrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sites {
+    float: left;
+    width: 33.333%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sites p {
+    font-family: 'Chewy', cursive;
+    font-size: 130%;
+}
+
+.s1 {
+    background-color: #e1e4b3;
+}
+
+.s2 {
+    background-color: #d76713;
+}
+
+.s3 {
+    background-color: #bdcbb6;
+}
+
+.sites a img {
+    transition: all 600ms ease-in-out;
+}
+
+.sites a img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.sites a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 50%;
+}
+
+.web {
+    height: 30px !important;
+    font-size: 140%;
+    color: dodgerblue;
+    font-family: 'Chewy', cursive;
+}
+
+.sites a img {
+    margin: 0 auto;
+    width: 50%;
+    height: 70%;
+}
+
+
+/* end of work */
+
+.contact {
+    padding: 0.11px;
+    width: 100%;
+    background-color: #bc8d45;
+}
+
+.contact p {
+    margin-top: 30px;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+    font-size: 170%;
+}
+
+#contact-form {
+    margin: 60px auto;
+    width: 70%;
+    font-family: 'Chewy', cursive;
+    font-size: 140%;
+}
+
+
+/*end of contact*/
+
+@media(max-width:1380px) {
+    .mainimg {
+        height: 768px;
+    }
+    .mummy {
+        margin: 50px 40px 0 0;
+    }
+    .name {
+        font-size: 200%;
+    }
+    .text {
+        font-size: 90px;
+    }
+    .sites a {
+        width: 65%;
+    }
+}
+
+@media(max-width:1024px) {
+    .mummy {
+        margin: -170px -40px 0 0;
+    }
+    .name {
+        top: 10%;
+        font-size: 200%;
+    }
+    .text {
+        font-size: 120px;
+        width: 55%;
+    }
+    .sites a {
+        width: 75%;
+    }
+    .me {
+        float: none;
+    }
+    .bout {
+        width: 100%;
+    }
+}
+
+@media(max-width:500px) {
+    #nav {
+        display: none;
+    }
+    header {
+        display: block !important;
+    }
+    #mobilemenu {
+        display: none;
+        background-color: #bc8d45;
+        margin: 0px auto;
+        z-index: 99999;
+        padding: 0.11px;
+    }
+    #mobilemenu li {
+        border-bottom: 1px solid white;
+        display: block;
+        width: 100%;
+        font-size: 90%;
+        margin: 0 auto;
+        z-index: 999;
+    }
+    #menu2 {
+        display: block;
+        color: white;
+        font-family: 'Chewy', cursive;
+        font-size: 120%;
+        margin: 10px auto;
+        float: left;
+        width: 40%;
+        text-align: center;
+    }
+    #menu2:hover #mobilemenu {
+        display: block;
+    }
+    .socialicons {
+        float: right;
+        width: 40%;
+    }
+    /* end of header */
+    .mainimg {
+        height: 400px;
+    }
+    .mummy {
+        position: absolute;
+        float: none;
+        top: 27%;
+        left: 61%;
+        width: 120px;
+        height: 208px;
+        background-size: contain;
+        margin: 0 auto;
+        background: url("img/mummy5.png");
+    }
+    .name {
+        top: 12%;
+        font-size: 100%;
+        z-index: 0;
+    }
+    .banner {
+        width: 100%;
+    }
+    .text {
+        font-size: 65px;
+        width: 65%;
+        z-index: 1;
+        margin: 30px auto;
+    }
+    .smalltext {
+        font-size: 30%;
+    }
+    @keyframes bloods {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            transform: translate3d(0, 180px, 0);
+            opacity: 0.0;
+        }
+        26% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0.0;
+        }
+    }
+    /* end of main img */
+    .do {
+        margin-bottom: 20px;
+    }
+    .circle {
+        width: 100%;
+        border-bottom: 3px solid black;
+    }
+    /* ned of what i do */
+    .me {
+        display: none;
+    }
+    #guard {
+        display: none;
+    }
+    #guard2 {
+        display: none;
+    }
+    .ab {
+        width: 80%;
+    }
+    .bout {
+        width: 100%;
+    }
+    /* end of about */
+    .sites {
+        width: 100%;
+        border-bottom: 3px solid black;
+    }
+    .sites a {
+        width: 65%;
+    }
+}
