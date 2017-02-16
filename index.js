@@ -1,8 +1,23 @@
+require('dotenv').config()
 var express = require('express');
 var bodyParser = require('body-parser');
-var helper = require('sendgrid').mail;
+var nodemailer = require('nodemailer');
+
 var app = express();
 
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: "smtp.gmail.com",
+    secure: false,
+    requireTLS: true,
+    auth: {
+        user: process.env.DB_USER,
+        pass: process.env.DB_PASS
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+});
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,7 +26,7 @@ app.use(bodyParser.json());
 
 app.use('/assets', express.static(__dirname + "/public"));
 var port = process.env.PORT || 3000;
-var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+
 
 // routes
 app.get('/', function(req, res) {
@@ -19,24 +34,23 @@ app.get('/', function(req, res) {
 })
 app.post('/mail', function(req, res, next) {
     var person = req.body;
-    from_email = new helper.Email(person.email);
-    to_email = new helper.Email("bojan87vasilevski@gmail.com");
-    subject = "From" + person.name + " " + person.surname;
-    content = new helper.Content("text/plain", person.message);
-    mail = new helper.Mail(from_email, subject, to_email, content);
+    var mailOptions = {
+        to: 'bojan87vasilevski@gmail.com',
+        from: person.email,
+        subject: "From " + person.name + "  " + person.surname,
+        text: person.email + " message is: " + person.message
+    }
+    transporter.sendMail(mailOptions, function(error, response) {
+        if (error) {
+            console.log(error);
+            res.end('error');
+        } else {
+            console.log('message send');
+            res.redirect('/')
+        }
 
-    var request = sg.emptyRequest({
-        method: 'POST',
-        path: '/v3/mail/send',
-        body: mail.toJSON()
-    });
-    sg.API(request, function(error, response) {
-        console.log(response.statusCode);
-        console.log(response.body);
-        console.log(response.headers);
     })
 
-    res.redirect('/');
 })
 
 
