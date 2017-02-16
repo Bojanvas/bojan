@@ -27,8 +27,10 @@ app.use(bodyParser.json());
 app.use('/assets', express.static(__dirname + "/public"));
 var port = process.env.PORT || 3000;
 
-
-// routes
+app.get('/info', function(req, res) {
+        res.send(process.env.DB_HOST);
+    })
+    // routes
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/views/index.html');
 })
