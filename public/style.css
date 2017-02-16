@@ -3,6 +3,10 @@ body {
     padding: 0.11px;
 }
 
+#load {
+    display: none;
+}
+
 .wrapper {
     width: 100%;
 }
