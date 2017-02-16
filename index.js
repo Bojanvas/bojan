@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
 var app = express();
-
+console.log(process.env.DB_HOST);
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     host: "smtp.gmail.com",
