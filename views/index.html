@@ -27,14 +27,14 @@
 
 
     <script>
-        $(window).on('load', function() {
+        function initi() {
             console.log('loaded');
-            $('#load').fadeIn();
-        })
+            document.getElementById('load').style.display = "block";
+        }
     </script>
 </head>
 
-<body id='load'>
+<body id='load' onload='initi()'>
     <div class="wrapper">
 
         <header>
