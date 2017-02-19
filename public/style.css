@@ -198,7 +198,7 @@ header {
 }
 
 .appers {
-    animation: apper 700ms ease-in-out forwards;
+    animation: apper 2500ms ease-in-out forwards;
 }
 
 @keyframes apper {
