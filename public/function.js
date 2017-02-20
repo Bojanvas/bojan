@@ -19,10 +19,10 @@ $(document).ready(function() {
         } else if (top > 1025 && top < 1450) {
             $('#a').addClass("active");
             $('#h,#w,#c').removeClass('active');
-        } else if (top > 1450 && top < 2150) {
+        } else if (top > 1450 && top < 2100) {
             $('#w').addClass("active");
             $('#h,#a,#c').removeClass('active');
-        } else if (top > 2150) {
+        } else if (top > 2100) {
             $('#c').addClass("active");
             $('#h,#w,#a').removeClass('active');
         }
